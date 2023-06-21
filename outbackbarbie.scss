@@ -1,0 +1,653 @@
+$black-border: 1px solid black;
+$orange-bg-clr: rgb(230, 96, 43);
+$greenbgclr: rgb(22, 37, 22);
+$align-width: 60%;
+$secondary-color: rgb(245, 231, 213);
+
+@mixin varun {
+  font-size: 1.2rem;
+  color: indianred;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.topbanner {
+  display: flex;
+  text-align: center;
+  // border : $black-border;
+  align-items: center;
+  height: 45px;
+  background-color: $orange-bg-clr;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.topbanner p {
+  margin-left: 5%;
+  // border: $black-border;
+  width: 100%;
+  color: white;
+}
+
+.toprightdiv {
+  display: flex;
+  justify-content: space-evenly;
+  // border : $black-border;
+  width: 35%;
+  margin-left: 40%;
+  color: white;
+}
+
+.toprightdiv {
+  button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.toprightdiv i a {
+  color: white;
+  text-decoration: none;
+}
+
+.topAUD {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+#curr {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $greenbgclr;
+  width: 100%;
+  position: fixed;
+  top: 35px;
+  z-index: 99;
+}
+
+.headerlogo {
+  padding: 1%;
+}
+
+.headercontent {
+  margin-left: 10%;
+  // border: 1px solid white;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headercontent a {
+  color: white;
+  text-decoration: none;
+  margin: 0 2% 0 2%;
+  text-align: center;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 42px;
+  position: relative;
+}
+
+.headercontent a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: $orange-bg-clr;
+  transition: width 0.7s ease;
+}
+
+.headercontent a:hover {
+  color: $orange-bg-clr;
+}
+
+.headercontent a:hover::after {
+  width: 100%;
+}
+
+.headercontent a:active::after {
+  width: 100%;
+}
+
+.headersearch {
+  display: flex;
+  // border: 1px solid white;
+  width: 10%;
+  margin-left: 25%;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.headersearch i {
+  color: white;
+  margin-right: 5%;
+  color: $orange-bg-clr;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.navsearch {
+  display: none;
+}
+
+.headersearch i:hover::after .navsearch {
+  content: "";
+  display: block;
+}
+
+.herosection {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 141px;
+}
+
+.hero-bg video {
+  width: 100%;
+}
+
+.herotext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.herotxt0 {
+  background-color: $orange-bg-clr;
+  color: white;
+}
+
+.herotxt1 {
+  font-size: 3.5em;
+  color: white;
+}
+
+.herotxt2 {
+  color: white;
+  width: 80%;
+  transform: translate(10%);
+  text-align: center;
+  margin: 2% 0% 2% 0%;
+}
+
+.herobtn {
+  background-color: orange;
+  color: white;
+  padding: 2% 3% 2% 3%;
+  margin-left: -50px;
+  border: 0;
+  cursor: pointer;
+}
+
+.aftermain {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.section1 {
+  display: flex;
+  height: 800px;
+}
+
+.section1img {
+  width: 50%;
+  height: 100%;
+}
+
+.section1img img {
+  width: 100%;
+  height: 100%;
+}
+
+.section1txt {
+  width: 50%;
+  color: white;
+  background-color: $greenbgclr;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.section1txt h2 {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.section1txt p {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.section1btn {
+  @extend .herobtn;
+  margin-left: 10%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.underscore1 {
+  font-weight: bolder;
+  color: $orange-bg-clr;
+}
+
+.section2 {
+  margin-top: 5%;
+  width: 30%;
+  margin: auto;
+}
+
+.section2 > h1 {
+  text-align: center;
+  color: darkslategray;
+  margin-top: 5%;
+}
+
+.section2 > h2 {
+  text-align: center;
+  color: $orange-bg-clr;
+}
+
+.section2txt {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 300px;
+  // border: $black-border;
+  text-align: left;
+}
+
+.section2txt h2 {
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+.section3outer {
+  position: relative;
+  background-color: rgb(243, 238, 238);
+  height: 100vh;
+  margin-top: 10%;
+}
+
+.section3content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -12%);
+  gap: 7rem
+}
+
+.section3 {
+  display: flex;
+  width: 100%;
+  // border: $black-border;
+  justify-content: space-evenly;
+}
+
+.section3 img {
+  width: 35%;
+}
+.section3btn {
+margin:0 auto;
+}
+
+.section3btn input {
+  background-color: rgb(255, 123, 0);
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.section3btn input[type="button"] {
+  cursor: pointer;
+}
+
+.section3img img {
+  width: 100%;
+}
+
+.section4 {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.s4h1 {
+  color: rgb(255, 123, 0);
+  text-align: center;
+}
+
+.section5 {
+  display: flex;
+  margin: auto;
+  width: $align-width;
+  // border: $black-border;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.section5 {
+  img {
+    width: 48%;
+  }
+}
+
+.section6 {
+  display: flex;
+  flex-flow: column;
+  width: $align-width;
+  margin: auto;
+  margin-top: 50px;
+
+  h3 {
+    margin-top: 1.5%;
+  }
+}
+
+.section7 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.btn7 {
+  background-color: rgb(255, 123, 0);
+  border: none;
+  padding: 15px 25px 15px 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.section8 {
+  margin-top: 5%;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.section8 img {
+  width: 100%;
+  height: 100%;
+}
+.section8layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.section8-text {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  column-gap: 20px;
+  height: 70%;
+  text-align: center;
+  display: flex;
+}
+.section8-left-text {
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.section8-left-text i {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+  // border: 3px solid yellow;
+  padding-bottom: 20px;
+}
+.section8-left-text p {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 0 2% 0 2%;
+}
+.section8-left-text h3 {
+  font-size: 1.1rem;
+  padding: 20px 0 20px 0;
+}
+.section8-left-lasttext {
+  text-align: end;
+}
+
+.section8-right-text {
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.section8-right-text i {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+  // border: 3px solid yellow;
+  padding-bottom: 20px;
+}
+.section8-right-text p {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 0 2% 0 2%;
+}
+.section8-right-text h3 {
+  font-size: 1.1rem;
+  padding: 20px 0 20px 0;
+}
+.section-9 {
+  display: flex;
+}
+.section-9 img {
+  width: 50%;
+}
+.section-9-right {
+  padding: 200px 30px 200px 30px;
+  background-color: $secondary-color;
+}
+.section9-underscore {
+  color: $orange-bg-clr;
+  padding-bottom: 30px;
+}
+.section-9-picture {
+  font-weight: lighter;
+}
+.section-9-primal {
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+.section-9-nothing {
+  font-weight: lighter;
+}
+// .section-10{
+//   p{
+//   @include varun
+//   }
+//   @extend .section2txt
+// }
+.section-10 {
+  display: flex;
+  img {
+    width: 50%;
+  }
+}
+.section-11 {
+  display: flex;
+  // border: $black-border;
+  .section-11-left {
+    width: 50%;
+    background-color: $greenbgclr;
+    color: white;
+    padding: 200px 50px 50px 50px;
+    h3 {
+      padding-bottom: 40px;
+    }
+    .section-10-shop-btn {
+      @extend .btn7;
+    }
+  }
+  .section-11-right {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.section-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: $orange-bg-clr;
+  color: white;
+  text-transform: uppercase;
+}
+
+.section-13 {
+  @extend .section-10;
+}
+
+.section-14 {
+  display: flex;
+  .section-14-left {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .section-14-right {
+    width: 50%;
+    background-color: $secondary-color;
+    color: black;
+    padding: 200px 50px 50px 50px;
+    h3 {
+      padding-bottom: 30px;
+    }
+    .section-14-btn {
+      @extend .btn7;
+    }
+  }
+}
+
+.section-15 {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  #s15h1-2 {
+    color: $orange-bg-clr;
+  }
+}
+.section-15-inner {
+  display: flex;
+  width: 65%;
+  margin-top: 2%;
+  // border: $black-border;
+
+  .section-15-inner-left {
+    width: 55%;
+    .s15p1 {
+      padding-top: 70px;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      padding: 10px 30px 20px 30px;
+      line-height: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .s15p6 {
+      color: $orange-bg-clr;
+    }
+  }
+  .section-15-inner-right {
+    width: 45%;
+    img {
+      width: 100%;
+      height: 600px;
+    }
+  }
+}
+.section-15-btn {
+  margin-top: 2%;
+  @extend .btn7;
+}
+.section-16 {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0ede6;
+  h2 {
+    margin-top: 2%;
+    background-color: rgb(223, 79, 27);
+    width: 60%;
+    margin-bottom: 2%;
+    text-align: center;
+    color: white;
+    height: 3rem;
+    padding-top: 5px;
+    justify-items: center;
+  }
+  .section-16-insta-pics {
+    object-fit: contain;
+    width: 60%;
+    height: 30%;
+    .section-16-img-left {
+      display: flex;
+      img {
+        width: 24%;
+        // border: $black-border;
+        padding: 1%;
+        height: 230px;
+      }
+    }
+    .section-16-img-right {
+      display: flex;
+      img {
+        width: 24%;
+        padding: 1%;
+        height: 230px;
+      }
+    }
+  }
+  h3 {
+    margin-top: 1%;
+    font-weight: bolder;
+  }
+}
